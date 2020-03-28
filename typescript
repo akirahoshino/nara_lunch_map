@@ -2943,4 +2943,96 @@ Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 6092
 
 
 Started POST "/shops" for 139.101.97.46 at 2020-03-28 17:40:37 +0000
-Cannot render console from 139.101.97.46! Allowed 
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShopsController#create as HTML
+  Parameters: {"authenticity_token"=>"gthO3wv6mGLiBrVmD0sXOjhoPgk3+CQ0KG2REM/mgj5QC2s1evQJ+HzRje0WDmmfDRT/glQJD1p4VhO2DQZ/FA==", "shop"=>{"category_id"=>"3", "name"=>"udon & cafe", "address"=>"1-1 福智院町 Nara, 630-8381"}, "commit"=>"Create Shop"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shops_controller.rb:30:in `block in create'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shops_controller.rb:30:in `block in create'
+  [1m[36mShop Create (0.3ms)[0m  [1m[32mINSERT INTO "shops" ("category_id", "name", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["category_id", 3], ["name", "udon & cafe"], ["address", "1-1 福智院町 Nara, 630-8381"], ["created_at", "2020-03-28 17:40:37.677249"], ["updated_at", "2020-03-28 17:40:37.677249"]]
+  ↳ app/controllers/shops_controller.rb:30:in `block in create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shops_controller.rb:30:in `block in create'
+Redirected to https://21c024882b21437b8fe8cef0a4f30bd3.vfs.cloud9.us-east-1.amazonaws.com/shops/3
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms | Allocations: 3853)
+
+
+Started GET "/shops/3" for 139.101.97.46 at 2020-03-28 17:40:37 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shops_controller.rb:67:in `set_shop'
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shops/show.html.erb:5
+  Rendered shops/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 979)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 5328)
+
+
+Started GET "/shops" for 139.101.97.46 at 2020-03-28 17:40:42 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/views/shops/index.html.erb:16
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shops/index.html.erb:18
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shops/index.html.erb:18
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shops/index.html.erb:18
+  Rendered shops/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3072)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.6ms | Allocations: 6714)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-03-28 17:41:15 +0000 ===
+- Goodbye!
+Exiting
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ git add .
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ git commit -, [K[Km ""l"i"n"k" "m"o"d"e"l"s"smodels"hmodels"omodels"pmodels"&models"cmodels"amodels"tmodels"emodels"gmodels"omodels"rmodels"ymodels" models"[C[C[C[C[C[C," "c"h"a"n"g"e" "f"o"r"m" "s"e"l"e"c"t"a"b"l"e" "c"a"t"e"g"o"r"y"[1P"i"e"s"[C[1@ [1@t[1@y[1@p[1@e[C[C[C
+[master 7075537] link shop&category models, change form type selectable categories
+ 6 files changed, 1382 insertions(+), 4 deletions(-)
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ git push
+Counting objects: 12, done.
+Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
+Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 8.27 KiB | 1.38 MiB/s, done.
+Total 12 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/8)[Kremote: Resolving deltas:  12% (1/8)[Kremote: Resolving deltas:  25% (2/8)[Kremote: Resolving deltas:  37% (3/8)[Kremote: Resolving deltas:  50% (4/8)[Kremote: Resolving deltas:  62% (5/8)[Kremote: Resolving deltas:  75% (6/8)[Kremote: Resolving deltas:  87% (7/8)[Kremote: Resolving deltas: 100% (8/8)[Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
+To github.com:akirahoshino/nara_lunch_map.git
+   7230d9f..7075537  master -> master
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails s
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+=> Booting Puma
+=> Rails 6.0.2.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.3 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:8080
+* Listening on tcp://[::1]:8080
+Use Ctrl-C to stop
+Started GET "/shops" for 139.101.97.46 at 2020-03-28 18:13:16 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/views/shops/index.html.erb:16
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shops/index.html.erb:18
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shops/index.html.erb:18
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shops/index.html.erb:18
+  Rendered shops/index.html.erb within layouts/application (Duration: 30.6ms | Allocations: 13054)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 52.3ms | ActiveRecord: 6.0ms | Allocations: 22335)
+
+
+Started
