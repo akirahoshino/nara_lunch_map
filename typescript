@@ -1230,4 +1230,344 @@ Started GET "/categories/1" for 139.101.97.46 at 2020-03-28 16:43:32 +0000
 Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by CategoriesController#show as HTML
-  Param
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:67:in `set_category'
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 386)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 29.9ms | ActiveRecord: 3.5ms | Allocations: 27819)
+
+
+Started GET "/categories" for 139.101.97.46 at 2020-03-28 16:43:37 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:14
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1087)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 4880)
+
+
+Started GET "/shops" for 139.101.97.46 at 2020-03-28 16:43:51 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/views/shops/index.html.erb:16
+  Rendered shops/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1287)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 1.6ms | Allocations: 5783)
+
+
+Started GET "/shops/new" for 139.101.97.46 at 2020-03-28 16:43:58 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShopsController#new as HTML
+  Rendering shops/new.html.erb within layouts/application
+  Rendered shops/_form.html.erb (Duration: 11.6ms | Allocations: 5358)
+  Rendered shops/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5711)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 17.5ms | ActiveRecord: 1.1ms | Allocations: 12727)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-03-28 16:44:08 +0000 ===
+- Goodbye!
+Exiting
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ git add .
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ git commit 0[K-m ""c"a"t"e"t"[1P"g"o"r"y" "a"n"d" "[1P"[1P"[1P"[1P"[1@m[1@a[1@d[1@e[1@ [C[C[C[C[C[C[C[C[C "a "n "d "[C "s "h "o "p "[C "s "c "a "f "f "o "l "d "[C[1P"
+[master 6e86c5c] made category and shop scaffold
+ 133 files changed, 11131 insertions(+), 1 deletion(-)
+ create mode 100644 .browserslistrc
+ create mode 100644 .gitignore
+ create mode 100644 .ruby-version
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+ create mode 100644 Rakefile
+ create mode 100644 app/assets/config/manifest.js
+ create mode 100644 app/assets/images/.keep
+ create mode 100644 app/assets/stylesheets/application.css
+ create mode 100644 app/assets/stylesheets/categories.scss
+ create mode 100644 app/assets/stylesheets/scaffolds.scss
+ create mode 100644 app/assets/stylesheets/shops.scss
+ create mode 100644 app/assets/stylesheets/welcome.scss
+ create mode 100644 app/channels/application_cable/channel.rb
+ create mode 100644 app/channels/application_cable/connection.rb
+ create mode 100644 app/controllers/application_controller.rb
+ create mode 100644 app/controllers/categories_controller.rb
+ create mode 100644 app/controllers/concerns/.keep
+ create mode 100644 app/controllers/shops_controller.rb
+ create mode 100644 app/controllers/welcome_controller.rb
+ create mode 100644 app/helpers/application_helper.rb
+ create mode 100644 app/helpers/categories_helper.rb
+ create mode 100644 app/helpers/shops_helper.rb
+ create mode 100644 app/helpers/welcome_helper.rb
+ create mode 100644 app/javascript/channels/consumer.js
+ create mode 100644 app/javascript/channels/index.js
+ create mode 100644 app/javascript/packs/application.js
+ create mode 100644 app/jobs/application_job.rb
+ create mode 100644 app/mailers/application_mailer.rb
+ create mode 100644 app/models/application_record.rb
+ create mode 100644 app/models/category.rb
+ create mode 100644 app/models/concerns/.keep
+ create mode 100644 app/models/shop.rb
+ create mode 100644 app/views/categories/_category.json.jbuilder
+ create mode 100644 app/views/categories/_form.html.erb
+ create mode 100644 app/views/categories/edit.html.erb
+ create mode 100644 app/views/categories/index.html.erb
+ create mode 100644 app/views/categories/index.json.jbuilder
+ create mode 100644 app/views/categories/new.html.erb
+ create mode 100644 app/views/categories/show.html.erb
+ create mode 100644 app/views/categories/show.json.jbuilder
+ create mode 100644 app/views/layouts/application.html.erb
+ create mode 100644 app/views/layouts/mailer.html.erb
+ create mode 100644 app/views/layouts/mailer.text.erb
+ create mode 100644 app/views/shops/_form.html.erb
+ create mode 100644 app/views/shops/_shop.json.jbuilder
+ create mode 100644 app/views/shops/edit.html.erb
+ create mode 100644 app/views/shops/index.html.erb
+ create mode 100644 app/views/shops/index.json.jbuilder
+ create mode 100644 app/views/shops/new.html.erb
+ create mode 100644 app/views/shops/show.html.erb
+ create mode 100644 app/views/shops/show.json.jbuilder
+ create mode 100644 app/views/welcome/index.html.erb
+ create mode 100644 babel.config.js
+ create mode 100755 bin/bundle
+ create mode 100755 bin/rails
+ create mode 100755 bin/rake
+ create mode 100755 bin/setup
+ create mode 100755 bin/spring
+ create mode 100755 bin/webpack
+ create mode 100755 bin/webpack-dev-server
+ create mode 100755 bin/yarn
+ create mode 100644 config.ru
+ create mode 100644 config/application.rb
+ create mode 100644 config/boot.rb
+ create mode 100644 config/cable.yml
+ create mode 100644 config/credentials.yml.enc
+ create mode 100644 config/database.yml
+ create mode 100644 config/environment.rb
+ create mode 100644 config/environments/development.rb
+ create mode 100644 config/environments/production.rb
+ create mode 100644 config/environments/test.rb
+ create mode 100644 config/initializers/application_controller_renderer.rb
+ create mode 100644 config/initializers/assets.rb
+ create mode 100644 config/initializers/backtrace_silencers.rb
+ create mode 100644 config/initializers/content_security_policy.rb
+ create mode 100644 config/initializers/cookies_serializer.rb
+ create mode 100644 config/initializers/filter_parameter_logging.rb
+ create mode 100644 config/initializers/inflections.rb
+ create mode 100644 config/initializers/mime_types.rb
+ create mode 100644 config/initializers/wrap_parameters.rb
+ create mode 100644 config/locales/en.yml
+ create mode 100644 config/puma.rb
+ create mode 100644 config/routes.rb
+ create mode 100644 config/spring.rb
+ create mode 100644 config/storage.yml
+ create mode 100644 config/webpack/development.js
+ create mode 100644 config/webpack/environment.js
+ create mode 100644 config/webpack/production.js
+ create mode 100644 config/webpack/test.js
+ create mode 100644 config/webpacker.yml
+ create mode 100644 db/migrate/20200328163751_create_categories.rb
+ create mode 100644 db/migrate/20200328164306_create_shops.rb
+ create mode 100644 db/schema.rb
+ create mode 100644 db/seeds.rb
+ create mode 100644 lib/assets/.keep
+ create mode 100644 lib/tasks/.keep
+ create mode 100644 log/.keep
+ create mode 100644 package.json
+ create mode 100644 postcss.config.js
+ create mode 100644 public/404.html
+ create mode 100644 public/422.html
+ create mode 100644 public/500.html
+ create mode 100644 public/apple-touch-icon-precomposed.png
+ create mode 100644 public/apple-touch-icon.png
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/robots.txt
+ create mode 100644 storage/.keep
+ create mode 100644 test/application_system_test_case.rb
+ create mode 100644 test/channels/application_cable/connection_test.rb
+ create mode 100644 test/controllers/.keep
+ create mode 100644 test/controllers/categories_controller_test.rb
+ create mode 100644 test/controllers/shops_controller_test.rb
+ create mode 100644 test/controllers/welcome_controller_test.rb
+ create mode 100644 test/fixtures/.keep
+ create mode 100644 test/fixtures/categories.yml
+ create mode 100644 test/fixtures/files/.keep
+ create mode 100644 test/fixtures/shops.yml
+ create mode 100644 test/helpers/.keep
+ create mode 100644 test/integration/.keep
+ create mode 100644 test/mailers/.keep
+ create mode 100644 test/models/.keep
+ create mode 100644 test/models/category_test.rb
+ create mode 100644 test/models/shop_test.rb
+ create mode 100644 test/system/.keep
+ create mode 100644 test/system/categories_test.rb
+ create mode 100644 test/system/shops_test.rb
+ create mode 100644 test/test_helper.rb
+ create mode 100644 tmp/.keep
+ create mode 100644 typescript
+ create mode 100644 vendor/.keep
+ create mode 100644 yarn.lock
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ git push
+Counting objects: 152, done.
+Compressing objects:   0% (1/131)   Compressing objects:   1% (2/131)   Compressing objects:   2% (3/131)   Compressing objects:   3% (4/131)   Compressing objects:   4% (6/131)   Compressing objects:   5% (7/131)   Compressing objects:   6% (8/131)   Compressing objects:   7% (10/131)   Compressing objects:   8% (11/131)   Compressing objects:   9% (12/131)   Compressing objects:  10% (14/131)   Compressing objects:  11% (15/131)   Compressing objects:  12% (16/131)   Compressing objects:  13% (18/131)   Compressing objects:  14% (19/131)   Compressing objects:  15% (20/131)   Compressing objects:  16% (21/131)   Compressing objects:  17% (23/131)   Compressing objects:  18% (24/131)   Compressing objects:  19% (25/131)   Compressing objects:  20% (27/131)   Compressing objects:  21% (28/131)   Compressing objects:  22% (29/131)   Compressing objects:  23% (31/131)   Compressing objects:  24% (32/131)   Compressing objects:  25% (33/131)   Compressing objects:  26% (35/131)   Compressing objects:  27% (36/131)   Compressing objects:  28% (37/131)   Compressing objects:  29% (38/131)   Compressing objects:  30% (40/131)   Compressing objects:  31% (41/131)   Compressing objects:  32% (42/131)   Compressing objects:  33% (44/131)   Compressing objects:  34% (45/131)   Compressing objects:  35% (46/131)   Compressing objects:  36% (48/131)   Compressing objects:  37% (49/131)   Compressing objects:  38% (50/131)   Compressing objects:  39% (52/131)   Compressing objects:  40% (53/131)   Compressing objects:  41% (54/131)   Compressing objects:  42% (56/131)   Compressing objects:  43% (57/131)   Compressing objects:  44% (58/131)   Compressing objects:  45% (59/131)   Compressing objects:  46% (61/131)   Compressing objects:  47% (62/131)   Compressing objects:  48% (63/131)   Compressing objects:  49% (65/131)   Compressing objects:  50% (66/131)   Compressing objects:  51% (67/131)   Compressing objects:  52% (69/131)   Compressing objects:  53% (70/131)   Compressing objects:  54% (71/131)   Compressing objects:  55% (73/131)   Compressing objects:  56% (74/131)   Compressing objects:  57% (75/131)   Compressing objects:  58% (76/131)   Compressing objects:  59% (78/131)   Compressing objects:  60% (79/131)   Compressing objects:  61% (80/131)   Compressing objects:  62% (82/131)   Compressing objects:  63% (83/131)   Compressing objects:  64% (84/131)   Compressing objects:  65% (86/131)   Compressing objects:  66% (87/131)   Compressing objects:  67% (88/131)   Compressing objects:  68% (90/131)   Compressing objects:  69% (91/131)   Compressing objects:  70% (92/131)   Compressing objects:  71% (94/131)   Compressing objects:  72% (95/131)   Compressing objects:  73% (96/131)   Compressing objects:  74% (97/131)   Compressing objects:  75% (99/131)   Compressing objects:  76% (100/131)   Compressing objects:  77% (101/131)   Compressing objects:  78% (103/131)   Compressing objects:  79% (104/131)   Compressing objects:  80% (105/131)   Compressing objects:  81% (107/131)   Compressing objects:  82% (108/131)   Compressing objects:  83% (109/131)   Compressing objects:  84% (111/131)   Compressing objects:  85% (112/131)   Compressing objects:  86% (113/131)   Compressing objects:  87% (114/131)   Compressing objects:  88% (116/131)   Compressing objects:  89% (117/131)   Compressing objects:  90% (118/131)   Compressing objects:  91% (120/131)   Compressing objects:  92% (121/131)   Compressing objects:  93% (122/131)   Compressing objects:  94% (124/131)   Compressing objects:  95% (125/131)   Compressing objects:  96% (126/131)   Compressing objects:  97% (128/131)   Compressing objects:  98% (129/131)   Compressing objects:  99% (130/131)   Compressing objects: 100% (131/131)   Compressing objects: 100% (131/131), done.
+Writing objects:   0% (1/152)   Writing objects:   1% (2/152)   Writing objects:   2% (4/152)   Writing objects:   3% (5/152)   Writing objects:   4% (7/152)   Writing objects:   5% (8/152)   Writing objects:   6% (10/152)   Writing objects:   7% (11/152)   Writing objects:   8% (13/152)   Writing objects:   9% (14/152)   Writing objects:  10% (16/152)   Writing objects:  11% (17/152)   Writing objects:  12% (19/152)   Writing objects:  13% (20/152)   Writing objects:  14% (22/152)   Writing objects:  15% (23/152)   Writing objects:  16% (25/152)   Writing objects:  17% (26/152)   Writing objects:  18% (28/152)   Writing objects:  19% (29/152)   Writing objects:  20% (31/152)   Writing objects:  21% (32/152)   Writing objects:  22% (34/152)   Writing objects:  23% (35/152)   Writing objects:  24% (37/152)   Writing objects:  25% (38/152)   Writing objects:  26% (40/152)   Writing objects:  27% (42/152)   Writing objects:  28% (43/152)   Writing objects:  29% (45/152)   Writing objects:  30% (46/152)   Writing objects:  31% (48/152)   Writing objects:  32% (49/152)   Writing objects:  33% (51/152)   Writing objects:  34% (52/152)   Writing objects:  35% (54/152)   Writing objects:  36% (55/152)   Writing objects:  37% (57/152)   Writing objects:  38% (58/152)   Writing objects:  40% (61/152)   Writing objects:  41% (63/152)   Writing objects:  42% (64/152)   Writing objects:  43% (66/152)   Writing objects:  44% (67/152)   Writing objects:  45% (69/152)   Writing objects:  46% (70/152)   Writing objects:  47% (72/152)   Writing objects:  48% (73/152)   Writing objects:  49% (75/152)   Writing objects:  50% (76/152)   Writing objects:  51% (78/152)   Writing objects:  52% (80/152)   Writing objects:  53% (81/152)   Writing objects:  54% (83/152)   Writing objects:  55% (84/152)   Writing objects:  56% (86/152)   Writing objects:  57% (87/152)   Writing objects:  58% (89/152)   Writing objects:  59% (90/152)   Writing objects:  60% (92/152)   Writing objects:  61% (93/152)   Writing objects:  62% (95/152)   Writing objects:  63% (96/152)   Writing objects:  64% (98/152)   Writing objects:  65% (99/152)   Writing objects:  66% (101/152)   Writing objects:  67% (102/152)   Writing objects:  68% (104/152)   Writing objects:  69% (105/152)   Writing objects:  70% (107/152)   Writing objects:  71% (108/152)   Writing objects:  72% (110/152)   Writing objects:  73% (111/152)   Writing objects:  74% (113/152)   Writing objects:  75% (114/152)   Writing objects:  76% (116/152)   Writing objects:  77% (118/152)   Writing objects:  78% (119/152)   Writing objects:  79% (121/152)   Writing objects:  80% (122/152)   Writing objects:  81% (124/152)   Writing objects:  82% (125/152)   Writing objects:  83% (127/152)   Writing objects:  84% (128/152)   Writing objects:  85% (130/152)   Writing objects:  86% (131/152)   Writing objects:  87% (133/152)   Writing objects:  88% (134/152)   Writing objects:  89% (136/152)   Writing objects:  90% (137/152)   Writing objects:  91% (139/152)   Writing objects:  92% (140/152)   Writing objects:  94% (143/152)   Writing objects:  95% (145/152)   Writing objects:  96% (146/152)   Writing objects:  98% (149/152)   Writing objects:  99% (151/152)   Writing objects: 100% (152/152)   Writing objects: 100% (152/152), 168.61 KiB | 3.92 MiB/s, done.
+Total 152 (delta 14), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/14)[Kremote: Resolving deltas:  14% (2/14)[Kremote: Resolving deltas:  21% (3/14)[Kremote: Resolving deltas:  28% (4/14)[Kremote: Resolving deltas:  35% (5/14)[Kremote: Resolving deltas:  42% (6/14)[Kremote: Resolving deltas:  50% (7/14)[Kremote: Resolving deltas:  64% (9/14)[Kremote: Resolving deltas:  78% (11/14)[Kremote: Resolving deltas:  85% (12/14)[Kremote: Resolving deltas:  92% (13/14)[Kremote: Resolving deltas: 100% (14/14)[Kremote: Resolving deltas: 100% (14/14), done.[K
+To github.com:akirahoshino/nara_lunch_map.git
+   349163f..6e86c5c  master -> master
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails routes \ g[K[K[K| grep catego
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+                           categories GET    /categories(.:format)                                                                    categories#index
+                                      POST   /categories(.:format)                                                                    categories#create
+                         new_category GET    /categories/new(.:format)                                                                categories#new
+                        edit_category GET    /categories/:id/edit(.:format)                                                           categories#edit
+                             category GET    /categories/:id(.:format)                                                                categories#show
+                                      PATCH  /categories/:id(.:format)                                                                categories#update
+                                      PUT    /categories/:id(.:format)                                                                categories#update
+                                      DELETE /categories/:id(.:format)                                                                categories#destroy
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails s
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+=> Booting Puma
+=> Rails 6.0.2.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.3 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:8080
+* Listening on tcp://[::1]:8080
+Use Ctrl-C to stop
+Started GET "/categories" for 139.101.97.46 at 2020-03-28 16:52:15 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:14
+  Rendered categories/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3934)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 16.6ms | ActiveRecord: 3.3ms | Allocations: 12774)
+
+
+Started GET "/shops" for 139.101.97.46 at 2020-03-28 16:52:22 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  ↳ app/views/shops/index.html.erb:16
+  Rendered shops/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1331)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.4ms | Allocations: 5815)
+
+
+Started GET "/categories" for 139.101.97.46 at 2020-03-28 16:52:25 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:14
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 766)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 4431)
+
+
+Started GET "/categories/new" for 139.101.97.46 at 2020-03-28 16:52:31 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 3.3ms | Allocations: 2328)
+  Rendered categories/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2681)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 6482)
+
+
+Started POST "/categories" for 139.101.97.46 at 2020-03-28 16:52:39 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"omEvc/FSs3MTbG7Q++0rA1ehdl7rr1iiE6cIOaT+SzF+7QwkhtFYudDuUID3zMt3rq6kW0Wi+9qXAXU2aKHk2w==", "category"=>{"name"=>"そば"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:30:in `block in create'
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "そば"], ["created_at", "2020-03-28 16:52:39.137576"], ["updated_at", "2020-03-28 16:52:39.137576"]]
+  ↳ app/controllers/categories_controller.rb:30:in `block in create'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:30:in `block in create'
+Redirected to https://21c024882b21437b8fe8cef0a4f30bd3.vfs.cloud9.us-east-1.amazonaws.com/categories/2
+Completed 302 Found in 9ms (ActiveRecord: 3.1ms | Allocations: 2917)
+
+
+Started GET "/categories/2" for 139.101.97.46 at 2020-03-28 16:52:39 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:67:in `set_category'
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 5011)
+
+
+Started GET "/categories" for 139.101.97.46 at 2020-03-28 16:52:43 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:14
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 873)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 4522)
+
+
+Started GET "/categories/new" for 139.101.97.46 at 2020-03-28 16:52:45 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.1ms | Allocations: 516)
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 602)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4257)
+
+
+Started POST "/categories" for 139.101.97.46 at 2020-03-28 16:52:59 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"rYE5qT5SHhUiIT7UXLgQ2YDVgSRQMQso1OiQAuwwLkRxDRr+SdH13+GjAIRQmfCtedpTIf48qFBQTu0NIG+Brg==", "category"=>{"name"=>"うどん"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:30:in `block in create'
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "うどん"], ["created_at", "2020-03-28 16:52:59.600594"], ["updated_at", "2020-03-28 16:52:59.600594"]]
+  ↳ app/controllers/categories_controller.rb:30:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:30:in `block in create'
+Redirected to https://21c024882b21437b8fe8cef0a4f30bd3.vfs.cloud9.us-east-1.amazonaws.com/categories/3
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms | Allocations: 2658)
+
+
+Started GET "/categories/3" for 139.101.97.46 at 2020-03-28 16:52:59 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:67:in `set_category'
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms | Allocations: 4263)
+
+
+Started GET "/categories" for 139.101.97.46 at 2020-03-28 16:53:02 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:14
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK
