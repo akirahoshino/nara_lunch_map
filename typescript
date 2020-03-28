@@ -1,0 +1,1233 @@
+Script started on Sat 28 Mar 2020 04:15:56 PM UTC
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ nano typescript 
+(B)0[?1049h[1;46r[m[4l[?1h=[?1h=[?1h=[39;49m[?25l[39;49m[m[H[J[44;75H[0;7m[ Reading File ][41A[m[44;81H[0;7m 0 lines[41A[m[34h[?25h[H[39;49m[0;7m  GNU nano 2.5.3                                          File: typescript                                                                                          [45;1H^G[m Get Help     [0;7m^O[m Write Out    [0;7m^W[m Where Is     [0;7m^K[m Cut Text     [0;7m^J[m Justify	[0;7m^C[m Cur Pos	[0;7m^Y[m Prev Page    [0;7mM-\[m First Line  [0;7mM-W[m WhereIs Next[0;7m^^[m Mark Text[1B[0;7m^X[m Exit[46;17H[0;7m^R[m Read File    [0;7m^\[m Replace	[0;7m^U[m Uncut Text   [0;7m^T[m To Spell     [0;7m^_[m Go To Line   [0;7m^V[m Next Page    [0;7mM-/[m Last Line   [0;7mM-][m To Bracket  [0;7mM-^[m Copy Text[43A[41B[J[46;164H[46;1H[?1049l[?1l>[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ :wdpwd
+/home/ec2-user/environment/nara_lunch
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ ls
+app		 bin	 config.ru  Gemfile	  lib  node_modules  postcss.config.js	Rakefile   storage  tmp		vendor
+babel.config.js  config  db	    Gemfile.lock  log  package.json  public		README.md  test     typescript	yarn.lock
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ lspwdnano typescript [10Pscript[2Pexitnano typescript [7Pscript -hls[Krails new . -d postgresqlls[Kscript -hnano typescript exit[Kscriptnano typescript pwd[K[1Pls[Krake routes
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+                               Prefix Verb   URI Pattern                                                                              Controller#Action
+        rails_mandrill_inbound_emails POST   /rails/action_mailbox/mandrill/inbound_emails(.:format)                                  action_mailbox/ingresses/mandrill/inbound_emails#create
+        rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                  action_mailbox/ingresses/postmark/inbound_emails#create
+           rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                     action_mailbox/ingresses/relay/inbound_emails#create
+        rails_sendgrid_inbound_emails POST   /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                  action_mailbox/ingresses/sendgrid/inbound_emails#create
+         rails_mailgun_inbound_emails POST   /rails/action_mailbox/mailgun/inbound_emails/mime(.:format)                              action_mailbox/ingresses/mailgun/inbound_emails#create
+       rails_conductor_inbound_emails GET    /rails/conductor/action_mailbox/inbound_emails(.:format)                                 rails/conductor/action_mailbox/inbound_emails#index
+                                      POST   /rails/conductor/action_mailbox/inbound_emails(.:format)                                 rails/conductor/action_mailbox/inbound_emails#create
+    new_rails_conductor_inbound_email GET    /rails/conductor/action_mailbox/inbound_emails/new(.:format)                             rails/conductor/action_mailbox/inbound_emails#new
+   edit_rails_conductor_inbound_email GET    /rails/conductor/action_mailbox/inbound_emails/:id/edit(.:format)                        rails/conductor/action_mailbox/inbound_emails#edit
+        rails_conductor_inbound_email GET    /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                             rails/conductor/action_mailbox/inbound_emails#show
+                                      PATCH  /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                             rails/conductor/action_mailbox/inbound_emails#update
+                                      PUT    /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                             rails/conductor/action_mailbox/inbound_emails#update
+                                      DELETE /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                             rails/conductor/action_mailbox/inbound_emails#destroy
+rails_conductor_inbound_email_reroute POST   /rails/conductor/action_mailbox/:inbound_email_id/reroute(.:format)                      rails/conductor/action_mailbox/reroutes#create
+                   rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+            rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+                   rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+            update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+                 rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails g controller welcome index
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils/version.rb:4: warning: already initialized constant FileUtils::VERSION
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:105: warning: previous definition of VERSION was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AIO_LISTIO_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AIO_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AIO_PRIO_DELTA_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ARG_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ATEXIT_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_BASE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_DIM_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_SCALE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_STRING_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CHILD_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CLK_TCK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_COLL_WEIGHTS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_DELAYTIMER_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_EXPR_NEST_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_HOST_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_IOV_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_LINE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_LOGIN_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_NGROUPS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_GETGR_R_SIZE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_GETPW_R_SIZE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MQ_OPEN_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MQ_PRIO_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_OPEN_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ADVISORY_INFO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BARRIERS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ASYNCHRONOUS_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CLOCK_SELECTION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CPUTIME
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_FSYNC
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_IPV6
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_JOB_CONTROL
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MAPPED_FILES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MEMLOCK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MEMLOCK_RANGE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MEMORY_PROTECTION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MESSAGE_PASSING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MONOTONIC_CLOCK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PRIORITIZED_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PRIORITY_SCHEDULING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_RAW_SOCKETS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_READER_WRITER_LOCKS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_REALTIME_SIGNALS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_REGEXP
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SAVED_IDS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SEMAPHORES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SHARED_MEMORY_OBJECTS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SHELL
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SPAWN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SPIN_LOCKS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SPORADIC_SERVER
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SS_REPL_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SYNCHRONIZED_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ATTR_STACKADDR
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ATTR_STACKSIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_CPUTIME
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PRIO_INHERIT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PRIO_PROTECT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PRIORITY_SCHEDULING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PROCESS_SHARED
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ROBUST_PRIO_INHERIT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ROBUST_PRIO_PROTECT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_SAFE_FUNCTIONS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_SPORADIC_SERVER
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREADS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TIMEOUTS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TIMERS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_EVENT_FILTER
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_EVENT_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_INHERIT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_LOG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_SYS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_USER_EVENT_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TYPED_MEMORY_OBJECTS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_ILP32_OFF32
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_ILP32_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_LP64_OFF64
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_LPBIG_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_ILP32_OFF32
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_ILP32_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_LP64_OFF64
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_LPBIG_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_C_BIND
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_C_DEV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_CHAR_TERM
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_FORT_DEV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_FORT_RUN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_LOCALEDEF
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_ACCOUNTING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_CHECKPOINT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_LOCATE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_MESSAGE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_TRACK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_SW_DEV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_UPE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PAGE_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PAGESIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_DESTRUCTOR_ITERATIONS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_KEYS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_STACK_MIN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_THREADS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_RE_DUP_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_RTSIG_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SEM_NSEMS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SEM_VALUE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SIGQUEUE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_STREAM_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SYMLOOP_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TIMER_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TTY_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TZNAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_CRYPT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_ENH_I18N
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_REALTIME
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_REALTIME_THREADS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_SHM
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_STREAMS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_UNIX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PHYS_PAGES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AVPHYS_PAGES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_NPROCESSORS_CONF
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_NPROCESSORS_ONLN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_PATH
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFF32_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFF32_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFF32_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LP64_OFF64_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LP64_OFF64_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LP64_OFF64_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LPBIG_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LPBIG_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LPBIG_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_WIDTH_RESTRICTED_ENVS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_V7_ENV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFF32_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFF32_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFF32_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LP64_OFF64_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LP64_OFF64_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LP64_OFF64_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LPBIG_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LPBIG_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LPBIG_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_WIDTH_RESTRICTED_ENVS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_V6_ENV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_GNU_LIBC_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_GNU_LIBPTHREAD_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_FILESIZEBITS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_LINK_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_MAX_CANON
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_MAX_INPUT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_PATH_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_PIPE_BUF
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_2_SYMLINKS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_ALLOC_SIZE_MIN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_INCR_XFER_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_MAX_XFER_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_MIN_XFER_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_XFER_ALIGN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_SYMLINK_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_CHOWN_RESTRICTED
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_NO_TRUNC
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_VDISABLE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_ASYNC_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_PRIO_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_SYNC_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Struct::Passwd
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Struct::Group
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1267: warning: already initialized constant FileUtils::Entry_::S_IF_DOOR
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1284: warning: previous definition of S_IF_DOOR was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1540: warning: already initialized constant FileUtils::Entry_::DIRECTORY_TERM
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1568: warning: previous definition of DIRECTORY_TERM was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1595: warning: already initialized constant FileUtils::OPT_TABLE
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1626: warning: previous definition of OPT_TABLE was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1649: warning: already initialized constant FileUtils::LOW_METHODS
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1685: warning: previous definition of LOW_METHODS was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1656: warning: already initialized constant FileUtils::METHODS
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1692: warning: previous definition of METHODS was here
+Running via Spring preloader in process 15780
+[1m[32m      create[0m  app/controllers/welcome_controller.rb
+[1m[32m       route[0m  get 'welcome/index'
+[1m[37m      invoke[0m  erb
+[1m[32m      create[0m    app/views/welcome
+[1m[32m      create[0m    app/views/welcome/index.html.erb
+[1m[37m      invoke[0m  test_unit
+[1m[32m      create[0m    test/controllers/welcome_controller_test.rb
+[1m[37m      invoke[0m  helper
+[1m[32m      create[0m    app/helpers/welcome_helper.rb
+[1m[37m      invoke[0m    test_unit
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/welcome.scss
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ ls
+app		 bin	 config.ru  Gemfile	  lib  node_modules  postcss.config.js	Rakefile   storage  tmp		vendor
+babel.config.js  config  db	    Gemfile.lock  log  package.json  public		README.md  test     typescript	yarn.lock
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails s
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+=> Booting Puma
+=> Rails 6.0.2.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.3 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:8080
+* Listening on tcp://[::1]:8080
+Use Ctrl-C to stop
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-03-28 16:19:54 +0000 ===
+- Goodbye!
+Exiting
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ cd [K[K[Krails s
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+=> Booting Puma
+=> Rails 6.0.2.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.3 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:8080
+* Listening on tcp://[::1]:8080
+Use Ctrl-C to stop
+Started GET "/" for 139.101.97.46 at 2020-03-28 16:20:47 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "nara_lunch_development" does not exist
+):
+  
+activerecord (6.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:889:in `new_connection'
+activerecord (6.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:933:in `checkout_new_connection'
+activerecord (6.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:912:in `try_to_checkout_new_connection'
+activerecord (6.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:873:in `acquire_connection'
+activerecord (6.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:595:in `checkout'
+activerecord (6.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:439:in `connection'
+activerecord (6.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1121:in `retrieve_connection'
+activerecord (6.0.2.2) lib/active_record/connection_handling.rb:238:in `retrieve_connection'
+activerecord (6.0.2.2) lib/active_record/connection_handling.rb:206:in `connection'
+activerecord (6.0.2.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-03-28 16:20:55 +0000 ===
+- Goodbye!
+Exiting
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rake db:setup
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+Created database 'nara_lunch_development'
+Created database 'nara_lunch_test'
+/home/ec2-user/environment/nara_lunch/db/schema.rb doesn't exist yet. Run `rails db:migrate` to create it, then try again. If you do not intend to use a database, you should instead alter /home/ec2-user/environment/nara_lunch/config/application.rb to limit the frameworks that will be loaded.
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ d[Krake routes
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+                               Prefix Verb   URI Pattern                                                                              Controller#Action
+                        welcome_index GET    /welcome/index(.:format)                                                                 welcome#index
+        rails_mandrill_inbound_emails POST   /rails/action_mailbox/mandrill/inbound_emails(.:format)                                  action_mailbox/ingresses/mandrill/inbound_emails#create
+        rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                  action_mailbox/ingresses/postmark/inbound_emails#create
+           rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                     action_mailbox/ingresses/relay/inbound_emails#create
+        rails_sendgrid_inbound_emails POST   /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                  action_mailbox/ingresses/sendgrid/inbound_emails#create
+         rails_mailgun_inbound_emails POST   /rails/action_mailbox/mailgun/inbound_emails/mime(.:format)                              action_mailbox/ingresses/mailgun/inbound_emails#create
+       rails_conductor_inbound_emails GET    /rails/conductor/action_mailbox/inbound_emails(.:format)                                 rails/conductor/action_mailbox/inbound_emails#index
+                                      POST   /rails/conductor/action_mailbox/inbound_emails(.:format)                                 rails/conductor/action_mailbox/inbound_emails#create
+    new_rails_conductor_inbound_email GET    /rails/conductor/action_mailbox/inbound_emails/new(.:format)                             rails/conductor/action_mailbox/inbound_emails#new
+   edit_rails_conductor_inbound_email GET    /rails/conductor/action_mailbox/inbound_emails/:id/edit(.:format)                        rails/conductor/action_mailbox/inbound_emails#edit
+        rails_conductor_inbound_email GET    /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                             rails/conductor/action_mailbox/inbound_emails#show
+                                      PATCH  /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                             rails/conductor/action_mailbox/inbound_emails#update
+                                      PUT    /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                             rails/conductor/action_mailbox/inbound_emails#update
+                                      DELETE /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                             rails/conductor/action_mailbox/inbound_emails#destroy
+rails_conductor_inbound_email_reroute POST   /rails/conductor/action_mailbox/:inbound_email_id/reroute(.:format)                      rails/conductor/action_mailbox/reroutes#create
+                   rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+            rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+                   rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+            update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+                 rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails s
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+=> Booting Puma
+=> Rails 6.0.2.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.3 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:8080
+* Listening on tcp://[::1]:8080
+Use Ctrl-C to stop
+Started GET "/" for 139.101.97.46 at 2020-03-28 16:23:08 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.9ms | Allocations: 315)
+Completed 200 OK in 17ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 1863)
+
+
+Started GET "/" for 139.101.97.46 at 2020-03-28 16:23:12 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.9ms | Allocations: 192)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1419)
+
+
+Started GET "/welcome" for 139.101.97.46 at 2020-03-28 16:23:22 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/welcome/index" for 139.101.97.46 at 2020-03-28 16:23:31 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/ec2-user/environment/nara_lunch/public/packs
+[Webpacker] Hash: 32e57f147dbdcbbf0c82
+Version: webpack 4.42.1
+Time: 2847ms
+Built at: 03/28/2020 4:23:36 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bbe9c4a129ab949e0636.js    124 KiB  application  [emitted] [immutable]  application
+js/application-bbe9c4a129ab949e0636.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bbe9c4a129ab949e0636.js js/application-bbe9c4a129ab949e0636.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 4838ms (Views: 4837.5ms | ActiveRecord: 0.0ms | Allocations: 17914)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-03-28 16:23:44 +0000 ===
+- Goodbye!
+Exiting
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails s
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+=> Booting Puma
+=> Rails 6.0.2.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.3 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:8080
+* Listening on tcp://[::1]:8080
+Use Ctrl-C to stop
+Started GET "/welcome/index" for 139.101.97.46 at 2020-03-28 16:25:03 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 7337)
+
+
+Started GET "/" for 139.101.97.46 at 2020-03-28 16:25:06 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 3442)
+
+
+Started GET "/" for 139.101.97.46 at 2020-03-28 16:26:43 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 4441)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-03-28 16:32:15 +0000 ===
+- Goodbye!
+Exiting
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails g scaffold name[K[K[K[Kcategory name:string
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+^Z
+[1]+  Stopped                 rails g scaffold category name:string
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ ps aux [K | greap[K[Kp spring
+ec2-user 15719  0.0  2.4 434588 24932 pts/2    Sl   16:18   0:00 spring server | nara_lunch | started 16 mins ago                                         
+ec2-user 15784  0.0  2.9 587716 29612 ?        Ssl  16:18   0:00 spring app    | nara_lunch | started 0 secs ago | development mode                                                                                                  
+ec2-user 16754  0.0  0.2 110520  2036 pts/2    S+   16:35   0:00 grep spring
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ p[Kstop [K[K[K[K[Kspring stop
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+Spring stopped.
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ spring stopps aux | grep spring
+ec2-user 15719  0.0  2.4 434588 24932 pts/2    Sl   16:18   0:00 spring server | nara_lunch | started 17 mins ago                                         
+ec2-user 15784  0.0  2.9 587716 29612 ?        Ssl  16:18   0:00 spring app    | nara_lunch | started 0 secs ago | development mode                                                                                                  
+ec2-user 16805  0.0  0.2 110520  2132 pts/2    S+   16:36   0:00 grep spring
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ kill -9 15719
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ kill -9 15719ps aux | grep spring
+ec2-user 15784  0.0  2.9 587716 29612 ?        Ssl  16:18   0:00 spring app    | nara_lunch | started 0 secs ago | development mode                                                                                                  
+ec2-user 16839  0.0  0.2 110520  2172 pts/2    S+   16:37   0:00 grep spring
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ spring start
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+Version: 2.1.0
+
+Usage: spring COMMAND [ARGS]
+
+Commands for Spring itself:
+
+  binstub         Generate Spring based binstubs. Use --all to generate a binstub for all known commands. Use --remove to revert.
+  help            Print available commands.
+  server          Explicitly start a Spring server in the foreground
+  status          Show current status.
+  stop            Stop all Spring processes for this project.
+
+Commands for your application:
+
+  rails           Run a rails command. The following sub commands will use Spring: console, runner, generate, destroy, test.
+  rake            Runs the rake command
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ spring startps aux | grep spring[7Pkill -9 15719ps aux | grep spring[7Pkill -9 15719ps aux | grep spring[8Pspring start[K
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ spring startps aux | grep spring[7Pkill -9 15719ps aux | grep spring[9Pspring stopps aux | grep springrails g scaffold category name:string
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils/version.rb:4: warning: already initialized constant FileUtils::VERSION
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:105: warning: previous definition of VERSION was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AIO_LISTIO_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AIO_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AIO_PRIO_DELTA_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ARG_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ATEXIT_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_BASE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_DIM_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_SCALE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_STRING_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CHILD_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CLK_TCK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_COLL_WEIGHTS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_DELAYTIMER_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_EXPR_NEST_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_HOST_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_IOV_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_LINE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_LOGIN_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_NGROUPS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_GETGR_R_SIZE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_GETPW_R_SIZE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MQ_OPEN_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MQ_PRIO_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_OPEN_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ADVISORY_INFO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BARRIERS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ASYNCHRONOUS_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CLOCK_SELECTION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CPUTIME
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_FSYNC
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_IPV6
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_JOB_CONTROL
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MAPPED_FILES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MEMLOCK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MEMLOCK_RANGE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MEMORY_PROTECTION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MESSAGE_PASSING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MONOTONIC_CLOCK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PRIORITIZED_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PRIORITY_SCHEDULING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_RAW_SOCKETS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_READER_WRITER_LOCKS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_REALTIME_SIGNALS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_REGEXP
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SAVED_IDS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SEMAPHORES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SHARED_MEMORY_OBJECTS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SHELL
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SPAWN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SPIN_LOCKS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SPORADIC_SERVER
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SS_REPL_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SYNCHRONIZED_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ATTR_STACKADDR
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ATTR_STACKSIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_CPUTIME
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PRIO_INHERIT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PRIO_PROTECT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PRIORITY_SCHEDULING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PROCESS_SHARED
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ROBUST_PRIO_INHERIT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ROBUST_PRIO_PROTECT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_SAFE_FUNCTIONS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_SPORADIC_SERVER
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREADS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TIMEOUTS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TIMERS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_EVENT_FILTER
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_EVENT_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_INHERIT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_LOG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_SYS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_USER_EVENT_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TYPED_MEMORY_OBJECTS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_ILP32_OFF32
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_ILP32_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_LP64_OFF64
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_LPBIG_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_ILP32_OFF32
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_ILP32_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_LP64_OFF64
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_LPBIG_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_C_BIND
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_C_DEV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_CHAR_TERM
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_FORT_DEV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_FORT_RUN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_LOCALEDEF
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_ACCOUNTING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_CHECKPOINT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_LOCATE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_MESSAGE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_TRACK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_SW_DEV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_UPE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PAGE_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PAGESIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_DESTRUCTOR_ITERATIONS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_KEYS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_STACK_MIN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_THREADS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_RE_DUP_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_RTSIG_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SEM_NSEMS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SEM_VALUE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SIGQUEUE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_STREAM_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SYMLOOP_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TIMER_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TTY_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TZNAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_CRYPT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_ENH_I18N
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_REALTIME
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_REALTIME_THREADS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_SHM
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_STREAMS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_UNIX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PHYS_PAGES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AVPHYS_PAGES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_NPROCESSORS_CONF
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_NPROCESSORS_ONLN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_PATH
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFF32_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFF32_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFF32_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LP64_OFF64_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LP64_OFF64_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LP64_OFF64_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LPBIG_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LPBIG_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LPBIG_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_WIDTH_RESTRICTED_ENVS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_V7_ENV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFF32_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFF32_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFF32_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LP64_OFF64_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LP64_OFF64_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LP64_OFF64_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LPBIG_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LPBIG_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LPBIG_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_WIDTH_RESTRICTED_ENVS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_V6_ENV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_GNU_LIBC_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_GNU_LIBPTHREAD_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_FILESIZEBITS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_LINK_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_MAX_CANON
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_MAX_INPUT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_PATH_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_PIPE_BUF
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_2_SYMLINKS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_ALLOC_SIZE_MIN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_INCR_XFER_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_MAX_XFER_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_MIN_XFER_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_XFER_ALIGN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_SYMLINK_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_CHOWN_RESTRICTED
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_NO_TRUNC
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_VDISABLE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_ASYNC_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_PRIO_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_SYNC_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Struct::Passwd
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Struct::Group
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1267: warning: already initialized constant FileUtils::Entry_::S_IF_DOOR
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1284: warning: previous definition of S_IF_DOOR was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1540: warning: already initialized constant FileUtils::Entry_::DIRECTORY_TERM
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1568: warning: previous definition of DIRECTORY_TERM was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1595: warning: already initialized constant FileUtils::OPT_TABLE
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1626: warning: previous definition of OPT_TABLE was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1649: warning: already initialized constant FileUtils::LOW_METHODS
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1685: warning: previous definition of LOW_METHODS was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1656: warning: already initialized constant FileUtils::METHODS
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1692: warning: previous definition of METHODS was here
+Running via Spring preloader in process 16927
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20200328163751_create_categories.rb
+[1m[32m      create[0m    app/models/category.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/models/category_test.rb
+[1m[32m      create[0m      test/fixtures/categories.yml
+[1m[37m      invoke[0m  resource_route
+[1m[32m       route[0m    resources :categories
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/categories_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/categories
+[1m[32m      create[0m      app/views/categories/index.html.erb
+[1m[32m      create[0m      app/views/categories/edit.html.erb
+[1m[32m      create[0m      app/views/categories/show.html.erb
+[1m[32m      create[0m      app/views/categories/new.html.erb
+[1m[32m      create[0m      app/views/categories/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/controllers/categories_controller_test.rb
+[1m[32m      create[0m      test/system/categories_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/categories_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[37m      invoke[0m    jbuilder
+[1m[32m      create[0m      app/views/categories/index.json.jbuilder
+[1m[32m      create[0m      app/views/categories/show.json.jbuilder
+[1m[32m      create[0m      app/views/categories/_category.json.jbuilder
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/categories.scss
+[1m[37m      invoke[0m  scss
+[1m[32m      create[0m    app/assets/stylesheets/scaffolds.scss
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rail[K[K[K[K
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails s
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+=> Booting Puma
+=> Rails 6.0.2.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.3 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:8080
+* Listening on tcp://[::1]:8080
+Use Ctrl-C to stop
+Started GET "/" for 139.101.97.46 at 2020-03-28 16:38:45 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.2.2) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.2.2) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-03-28 16:38:52 +0000 ===
+- Goodbye!
+Exiting
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ di[K[Krails db:migrate
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+== 20200328163751 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0093s
+== 20200328163751 CreateCategories: migrated (0.0098s) ========================
+
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails s
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+=> Booting Puma
+=> Rails 6.0.2.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.3 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:8080
+* Listening on tcp://[::1]:8080
+Use Ctrl-C to stop
+Started GET "/" for 139.101.97.46 at 2020-03-28 16:39:13 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 208)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 22182)
+
+
+Started GET "/category/new" for 139.101.97.46 at 2020-03-28 16:39:30 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/category/new"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories/index" for 139.101.97.46 at 2020-03-28 16:39:46 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:67:in `set_category'
+Completed 404 Not Found in 9ms (ActiveRecord: 3.4ms | Allocations: 2617)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=index):
+  
+app/controllers/categories_controller.rb:67:in `set_category'
+Started GET "/categories" for 139.101.97.46 at 2020-03-28 16:39:51 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:14
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 908)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.2ms | Allocations: 5088)
+
+
+Started GET "/categories/new" for 139.101.97.46 at 2020-03-28 16:39:57 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 11.6ms | Allocations: 4553)
+  Rendered categories/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 4907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 10899)
+
+
+Started POST "/categories" for 139.101.97.46 at 2020-03-28 16:40:19 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"sEzSila+Ag1KK8adSKUg7PlS+KnXZzXOhv0wjU4K1yZswPHdIT3px4mp+M1EhMCYAF0qrHlqlrYCW02CglV4zA==", "category"=>{"name"=>"Japanese"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:30:in `block in create'
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Japanese"], ["created_at", "2020-03-28 16:40:19.371214"], ["updated_at", "2020-03-28 16:40:19.371214"]]
+  ↳ app/controllers/categories_controller.rb:30:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:30:in `block in create'
+Redirected to https://21c024882b21437b8fe8cef0a4f30bd3.vfs.cloud9.us-east-1.amazonaws.com/categories/1
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 2912)
+
+
+Started GET "/categories/1" for 139.101.97.46 at 2020-03-28 16:40:19 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:67:in `set_category'
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 4512)
+
+
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-03-28 16:40:30 +0000 ===
+- Goodbye!
+Exiting
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails g scaffold shop category_id [K:integer name:string address:text
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+^C^Z
+[2]+  Stopped                 rails g scaffold shop category_id:integer name:string address:text
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ 
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ spring stop
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+Spring stopped.
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ spring stop[K[K[K[Kstart
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+Version: 2.1.0
+
+Usage: spring COMMAND [ARGS]
+
+Commands for Spring itself:
+
+  binstub         Generate Spring based binstubs. Use --all to generate a binstub for all known commands. Use --remove to revert.
+  help            Print available commands.
+  server          Explicitly start a Spring server in the foreground
+  status          Show current status.
+  stop            Stop all Spring processes for this project.
+
+Commands for your application:
+
+  rails           Run a rails command. The following sub commands will use Spring: console, runner, generate, destroy, test.
+  rake            Runs the rake command
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ spring start[1Poprails g scaffold shop category_id:integer name:string address:text
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils/version.rb:4: warning: already initialized constant FileUtils::VERSION
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:105: warning: previous definition of VERSION was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AIO_LISTIO_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AIO_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AIO_PRIO_DELTA_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ARG_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ATEXIT_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_BASE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_DIM_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_SCALE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BC_STRING_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CHILD_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CLK_TCK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_COLL_WEIGHTS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_DELAYTIMER_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_EXPR_NEST_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_HOST_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_IOV_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_LINE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_LOGIN_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_NGROUPS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_GETGR_R_SIZE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_GETPW_R_SIZE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MQ_OPEN_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MQ_PRIO_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_OPEN_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ADVISORY_INFO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_BARRIERS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_ASYNCHRONOUS_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CLOCK_SELECTION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_CPUTIME
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_FSYNC
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_IPV6
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_JOB_CONTROL
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MAPPED_FILES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MEMLOCK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MEMLOCK_RANGE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MEMORY_PROTECTION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MESSAGE_PASSING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_MONOTONIC_CLOCK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PRIORITIZED_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PRIORITY_SCHEDULING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_RAW_SOCKETS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_READER_WRITER_LOCKS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_REALTIME_SIGNALS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_REGEXP
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SAVED_IDS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SEMAPHORES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SHARED_MEMORY_OBJECTS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SHELL
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SPAWN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SPIN_LOCKS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SPORADIC_SERVER
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SS_REPL_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SYNCHRONIZED_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ATTR_STACKADDR
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ATTR_STACKSIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_CPUTIME
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PRIO_INHERIT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PRIO_PROTECT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PRIORITY_SCHEDULING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_PROCESS_SHARED
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ROBUST_PRIO_INHERIT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_ROBUST_PRIO_PROTECT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_SAFE_FUNCTIONS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_SPORADIC_SERVER
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREADS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TIMEOUTS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TIMERS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_EVENT_FILTER
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_EVENT_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_INHERIT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_LOG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_SYS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TRACE_USER_EVENT_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TYPED_MEMORY_OBJECTS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_ILP32_OFF32
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_ILP32_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_LP64_OFF64
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V7_LPBIG_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_ILP32_OFF32
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_ILP32_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_LP64_OFF64
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_V6_LPBIG_OFFBIG
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_C_BIND
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_C_DEV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_CHAR_TERM
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_FORT_DEV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_FORT_RUN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_LOCALEDEF
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_ACCOUNTING
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_CHECKPOINT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_LOCATE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_MESSAGE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_PBS_TRACK
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_SW_DEV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_UPE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_2_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PAGE_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PAGESIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_DESTRUCTOR_ITERATIONS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_KEYS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_STACK_MIN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_THREAD_THREADS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_RE_DUP_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_RTSIG_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SEM_NSEMS_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SEM_VALUE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SIGQUEUE_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_STREAM_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_SYMLOOP_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TIMER_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TTY_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_TZNAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_CRYPT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_ENH_I18N
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_REALTIME
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_REALTIME_THREADS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_SHM
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_STREAMS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_UNIX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_XOPEN_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_PHYS_PAGES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_AVPHYS_PAGES
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_NPROCESSORS_CONF
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::SC_NPROCESSORS_ONLN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_PATH
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFF32_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFF32_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFF32_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_ILP32_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LP64_OFF64_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LP64_OFF64_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LP64_OFF64_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LPBIG_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LPBIG_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_LPBIG_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V7_WIDTH_RESTRICTED_ENVS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_V7_ENV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFF32_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFF32_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFF32_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_ILP32_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LP64_OFF64_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LP64_OFF64_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LP64_OFF64_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LPBIG_OFFBIG_CFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LPBIG_OFFBIG_LDFLAGS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_LPBIG_OFFBIG_LIBS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_POSIX_V6_WIDTH_RESTRICTED_ENVS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_V6_ENV
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_GNU_LIBC_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::CS_GNU_LIBPTHREAD_VERSION
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_FILESIZEBITS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_LINK_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_MAX_CANON
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_MAX_INPUT
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_NAME_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_PATH_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_PIPE_BUF
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_2_SYMLINKS
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_ALLOC_SIZE_MIN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_INCR_XFER_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_MAX_XFER_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_MIN_XFER_SIZE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_REC_XFER_ALIGN
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_SYMLINK_MAX
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_CHOWN_RESTRICTED
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_NO_TRUNC
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_VDISABLE
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_ASYNC_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_PRIO_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Etc::PC_SYNC_IO
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Struct::Passwd
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/x86_64-linux/etc.so: warning: already initialized constant Struct::Group
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1267: warning: already initialized constant FileUtils::Entry_::S_IF_DOOR
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1284: warning: previous definition of S_IF_DOOR was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1540: warning: already initialized constant FileUtils::Entry_::DIRECTORY_TERM
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1568: warning: previous definition of DIRECTORY_TERM was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1595: warning: already initialized constant FileUtils::OPT_TABLE
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1626: warning: previous definition of OPT_TABLE was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1649: warning: already initialized constant FileUtils::LOW_METHODS
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1685: warning: previous definition of LOW_METHODS was here
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/fileutils.rb:1656: warning: already initialized constant FileUtils::METHODS
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/fileutils-1.4.1/lib/fileutils.rb:1692: warning: previous definition of METHODS was here
+Running via Spring preloader in process 17441
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20200328164306_create_shops.rb
+[1m[32m      create[0m    app/models/shop.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/models/shop_test.rb
+[1m[32m      create[0m      test/fixtures/shops.yml
+[1m[37m      invoke[0m  resource_route
+[1m[32m       route[0m    resources :shops
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/shops_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/shops
+[1m[32m      create[0m      app/views/shops/index.html.erb
+[1m[32m      create[0m      app/views/shops/edit.html.erb
+[1m[32m      create[0m      app/views/shops/show.html.erb
+[1m[32m      create[0m      app/views/shops/new.html.erb
+[1m[32m      create[0m      app/views/shops/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/controllers/shops_controller_test.rb
+[1m[32m      create[0m      test/system/shops_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/shops_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[37m      invoke[0m    jbuilder
+[1m[32m      create[0m      app/views/shops/index.json.jbuilder
+[1m[32m      create[0m      app/views/shops/show.json.jbuilder
+[1m[32m      create[0m      app/views/shops/_shop.json.jbuilder
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/shops.scss
+[1m[37m      invoke[0m  scss
+[1m[34m   identical[0m    app/assets/stylesheets/scaffolds.scss
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ rails db:migrate
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+== 20200328164306 CreateShops: migrating ======================================
+-- create_table(:shops)
+   -> 0.0090s
+== 20200328164306 CreateShops: migrated (0.0096s) =============================
+
+[01;32mec2-user[00m:[01;34m~/environment/nara_lunch[00m (master) $ ria[K[Kails s
+[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+=> Booting Puma
+=> Rails 6.0.2.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.3 (ruby 2.6.3-p62), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://127.0.0.1:8080
+* Listening on tcp://[::1]:8080
+Use Ctrl-C to stop
+Started GET "/categories/1" for 139.101.97.46 at 2020-03-28 16:43:32 +0000
+Cannot render console from 139.101.97.46! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as HTML
+  Param
